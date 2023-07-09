@@ -1,0 +1,44 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.u2020.sdk.env" >
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.asus.msa.SupplementaryDID.ACCESS" />
+    <uses-permission android:name="freemme.permission.msa" />
+    <queries>
+        <!-- huawei -->
+        <package android:name="com.huawei.hwid" />
+        <package android:name="com.huawei.hwid.tv" />
+        <package android:name="com.huawei.hms" />
+
+        <!-- oppo -->
+        <package android:name="com.heytap.openid" />
+
+        <!-- zte -->
+        <package android:name="com.mdid.msa" />
+
+        <!-- samsung -->
+        <package android:name="com.samsung.android.deviceidservice" />
+
+        <!-- freeme -->
+        <package android:name="com.android.creator" />
+
+        <!-- coolpad -->
+        <package android:name="com.coolpad.deviceidsupport" />
+
+        <!-- asus -->
+        <package android:name="com.asus.msa.SupplementaryDID" />
+
+        <!-- lenovo -->
+        <package android:name="com.zui.deviceidservice" />
+    </queries>
+
+    <application>
+        <service android:name="com.u2020.sdk.env.TattooService"
+            android:exported="false"
+            android:process=":tattoo"/>
+    </application>
+
+</manifest>
+
